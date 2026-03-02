@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>BSDigi</title>
-    <meta name="description" content="Digital experiments, notes, and project updates.">
+    <title>Kevin Jump Game</title>
+    <meta name="description" content="Kevin's mini browser game. Press Space to jump over obstacles.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -16,43 +16,36 @@
   <body>
     <main class="page">
       <section class="panel hero">
-        <p class="eyebrow">BSDigi</p>
-        <h1>Build, ship, iterate.</h1>
+        <p class="eyebrow">Kevin</p>
+        <h1>Kevin Jump Game</h1>
         <p class="lead">
-          This site is the public home for BSDigi projects, technical notes, and release updates.
+          Press <strong>Space</strong> to jump and avoid obstacles. Survive longer to score higher.
         </p>
+      </section>
+
+      <section class="panel game-panel">
+        <div class="game-header">
+          <h2>Runner</h2>
+          <div class="scoreboard">
+            <span>Score: <strong id="score">0</strong></span>
+            <span>Best: <strong id="best-score">0</strong></span>
+          </div>
+        </div>
+        <canvas id="game-canvas" width="860" height="260" aria-label="Kevin jump game area"></canvas>
+        <p id="game-message" class="game-message">Press Space to start. Press Space again to jump.</p>
         <div class="actions">
-          <a class="btn primary" href="https://github.com/bsdigis">GitHub Profile</a>
-          <a class="btn secondary" href="https://github.com/bsdigis/bsdigi.github.io">Repository</a>
+          <button id="restart-btn" class="btn secondary" type="button">Restart</button>
         </div>
       </section>
 
       <section class="panel">
-        <h2>Current Focus</h2>
-        <div class="grid">
-          <article class="card">
-            <h3>Site Foundation</h3>
-            <p>Set up a clean GitHub Pages base with a simple, maintainable structure.</p>
-          </article>
-          <article class="card">
-            <h3>Project Notes</h3>
-            <p>Document implementation choices and tradeoffs in short engineering writeups.</p>
-          </article>
-          <article class="card">
-            <h3>Release Log</h3>
-            <p>Track meaningful updates so changes stay visible and easy to follow.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="panel">
-        <h2>Next Steps</h2>
-        <ol>
-          <li>Publish the first project article.</li>
-          <li>Add a changelog page.</li>
-          <li>Add contact and social links.</li>
-        </ol>
+        <h2>Controls</h2>
+        <p class="control-hint">
+          Space: jump. If game over, press Space or Restart to play again.
+          On mobile, tap the game area to jump.
+        </p>
       </section>
     </main>
+    <script src="assets/js/game.js"></script>
   </body>
 </html>

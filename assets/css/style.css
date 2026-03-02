@@ -24,7 +24,7 @@ body {
 }
 
 .page {
-  width: min(960px, 92vw);
+  width: min(980px, 92vw);
   margin: 34px auto;
   display: grid;
   gap: 14px;
@@ -53,11 +53,6 @@ h2 {
   margin: 0 0 14px;
 }
 
-h3 {
-  margin: 0 0 6px;
-  font-size: 1.02rem;
-}
-
 p {
   margin: 0;
 }
@@ -74,7 +69,7 @@ p {
 .lead {
   margin: 0 0 16px;
   color: var(--muted);
-  max-width: 54ch;
+  max-width: 62ch;
 }
 
 .actions {
@@ -88,8 +83,12 @@ p {
   border-radius: 999px;
   font-weight: 600;
   text-decoration: none;
+  border: 0;
+  cursor: pointer;
   padding: 8px 15px;
   transition: transform 160ms ease, box-shadow 160ms ease;
+  font-family: "IBM Plex Sans", Arial, sans-serif;
+  font-size: 0.95rem;
 }
 
 .btn:hover {
@@ -106,6 +105,54 @@ p {
   border: 1px solid var(--line);
   color: var(--ink);
   background: #ffffffcc;
+}
+
+.game-panel {
+  display: grid;
+  gap: 12px;
+}
+
+.game-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.game-header h2 {
+  margin-bottom: 0;
+}
+
+.scoreboard {
+  display: flex;
+  gap: 14px;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+#game-canvas {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: linear-gradient(180deg, #dbeafe 0%, #ecfeff 65%, #fef3c7 100%);
+  touch-action: manipulation;
+}
+
+.game-message {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.control-hint {
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.hidden {
+  display: none;
 }
 
 .grid {
@@ -147,5 +194,10 @@ li + li {
 
   h1 {
     font-size: 1.62rem;
+  }
+
+  .scoreboard {
+    width: 100%;
+    justify-content: space-between;
   }
 }
