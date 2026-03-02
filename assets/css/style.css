@@ -1,0 +1,151 @@
+:root {
+  --bg-top: #fff7ed;
+  --bg-bottom: #ecfeff;
+  --ink: #172554;
+  --muted: #334155;
+  --surface: #fffbeb;
+  --line: #cbd5e1;
+  --accent: #0f766e;
+  --accent-ink: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "IBM Plex Sans", Arial, sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 12% 15%, rgba(251, 191, 36, 0.2), transparent 32%),
+    radial-gradient(circle at 88% 10%, rgba(14, 116, 144, 0.22), transparent 35%),
+    linear-gradient(160deg, var(--bg-top), var(--bg-bottom));
+}
+
+.page {
+  width: min(960px, 92vw);
+  margin: 34px auto;
+  display: grid;
+  gap: 14px;
+}
+
+.panel {
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 26px 24px;
+  backdrop-filter: blur(6px);
+}
+
+h1, h2, h3 {
+  font-family: "Space Grotesk", "IBM Plex Sans", Arial, sans-serif;
+  color: var(--ink);
+}
+
+h1 {
+  margin: 0 0 10px;
+  line-height: 1.08;
+  font-size: 2rem;
+}
+
+h2 {
+  margin: 0 0 14px;
+}
+
+h3 {
+  margin: 0 0 6px;
+  font-size: 1.02rem;
+}
+
+p {
+  margin: 0;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: #0f766e;
+}
+
+.lead {
+  margin: 0 0 16px;
+  color: var(--muted);
+  max-width: 54ch;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 8px 15px;
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn.primary {
+  background: var(--accent);
+  color: var(--accent-ink);
+  box-shadow: 0 6px 16px rgba(15, 118, 110, 0.24);
+}
+
+.btn.secondary {
+  border: 1px solid var(--line);
+  color: var(--ink);
+  background: #ffffffcc;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px;
+}
+
+.card {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 14px;
+  background: var(--surface);
+}
+
+.card p {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+ol {
+  margin: 0;
+  padding-left: 20px;
+  color: var(--muted);
+}
+
+li + li {
+  margin-top: 8px;
+}
+
+@media (max-width: 720px) {
+  .page {
+    margin: 18px auto;
+  }
+
+  .panel {
+    padding: 20px 16px;
+  }
+
+  h1 {
+    font-size: 1.62rem;
+  }
+}
